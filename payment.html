@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pesanan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #add8e6;
+            text-align: center;
+            padding: 20px;
+        }
+        form {
+            display: inline-block;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea, button {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        img {
+            width: 85%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Pesanan</h1>
+    <p align="center">Ini Akan Mengarah Ke Whatsapp</p>
+    <form id="whatsappForm">
+        <input type="text" id="name" placeholder="NAME" required>
+        <input type="email" id="email" placeholder="EMAIL (opsional)">
+        <textarea id="order" placeholder="APA YANG ANDA PESAN" rows="4" required></textarea>
+        <button type="button" onclick="sendToWhatsApp()">Kirim</button>
+    </form>
+<br><br><br><br><br><br>
+<h1>SCROLL FOR QRIS</h1>
+
+<img src="qris.jpeg" alt="qris">
+
+    <script>
+        function sendToWhatsApp() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const order = document.getElementById('order').value;
+
+            if (!name || !order) {
+                alert('Harap isi semua kolom yang wajib!');
+                return;
+            }
+
+            const whatsappNumber = "6283896816700"; // Nomor WhatsApp tujuan
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                `Halo, saya ingin memesan!\n\nNama: ${name}\nEmail: ${email || "Tidak diisi"}\nPesanan: ${order}`
+            )}`;
+
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

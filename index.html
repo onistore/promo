@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROMO ONISTORE</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .page {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            page-break-after: always;
+        }
+        
+        .page-one {
+            background: linear-gradient(135deg, 
+                #1e90ff, 
+                #ffb6c1 30%, 
+                #ff6347 60%, 
+                #ff4500 80%
+            );
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin: 0;
+            text-transform: uppercase;
+            color: #ffebcd;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                         0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .countdown-container {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .countdown-container h1 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                         0 0 20px rgba(255, 255, 255, 0.6);
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .timer div {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .timer div span {
+            display: block;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fcd34d;
+        }
+
+        .timer div small {
+            margin-top: 10px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .page-two {
+            background: linear-gradient(135deg, 
+                #1e90ff, 
+                #ffb6c1 30%, 
+                #ff6347 60%, 
+                #ff4500 80%
+            );
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .page-two h1 {
+            color: #ffebcd;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                         0 0 20px rgba(255, 255, 255, 0.3);
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .promo {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .promo a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .promo img {
+            width: 100%;
+            max-width: 180px;
+            margin: 0 auto;
+            display: block;
+            transition: transform 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            padding: 30px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .promo img:hover {
+            transform: scale(1.1);
+            border-color: #fcd34d;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .logo-container {
+                position: relative;
+                top: 0;
+                left: 0;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .logo {
+                width: 80px;
+            }
+
+            .header {
+                margin-bottom: 10px;
+            }
+
+            .countdown-container h1 {
+                font-size: 1.5rem;
+            }
+
+            .timer {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .timer div {
+                padding: 15px 10px;
+            }
+
+            .timer div span {
+                font-size: 2.5rem;
+            }
+
+            .promo {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .promo img {
+                max-width: 100px;
+                padding: 5px;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page page-one">
+        <div class="logo-container">
+        <a href="https://www.onistore.biz.id/">
+            <img src="logo.png" alt="Logo" class="logo">
+        </a>
+        </div>
+
+        <header class="header">
+            <p class="tagline">ONISTORE KHUSUS PROMO</p>
+        </header>
+
+        <div class="countdown-container">
+            <h1>Promo Besar Spesial Admin Ultah :V Yok Guys Order</h1>
+            <h2>Ini Admin Yah Bukan Owner!</h2>
+            <div class="timer">
+                <div>
+                    <span id="days">00</span>
+                    <small>Days</small>
+                </div>
+                <div>
+                    <span id="hours">00</span>
+                    <small>Hours</small>
+                </div>
+                <div>
+                    <span id="minutes">00</span>
+                    <small>Minutes</small>
+                </div>
+                <div>
+                    <span id="seconds">00</span>
+                    <small>Seconds</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page page-two">
+        <h1>PROMO SPESIAL ULTAH ADMIN ONISTORE!!!</h1>
+        <p>YG IMG NYA LOGO ITU GAADA PROMO YAH</p>
+        <div class="promo">
+
+            <a href="https://promo.onistore.biz.id/produk/canva.html">
+                <img src="img/canva.png" alt="canva">
+            </a>
+            
+            <a href="https://promo.onistore.biz.id/produk/ytprem.html">
+                <img src="img/ytprem.png" alt="yt prem">
+            </a>
+            
+            <a href="https://promo.onistore.biz.id/produk/am.html">
+                <img src="img/am.png" alt="alight motion">
+            </a>
+            
+            <a href="https://promo.onistore.biz.id/produk/capcut.html">
+                <img src="img/capcut.png" alt="capcut">
+            </a>
+            
+            <a href="https://promo.onistore.biz.id/produk/bstation.html">
+                <img src="img/bstation.png" alt="bstation">
+            </a>
+            
+            <a href="https://promo.onistore.biz.id/produk/spotify.html">
+                <img src="img/spotify.png" alt="spotify">
+            </a>
+
+            <a href="https://www.onistore.biz.id/">
+                <img src="logo.png" alt="Partner">
+            </a>
+            
+            <a href="https://www.onistore.biz.id/">
+                <img src="logo.png" alt="Partner">
+            </a>
+            
+            <a href="https://www.onistore.biz.id/">
+                <img src="logo.png" alt="Partner">
+            </a>
+            
+            <a href="https://www.onistore.biz.id/">
+                <img src="logo.png" alt="Partner">
+            </a>
+            
+            <a href="https://www.onistore.biz.id/">
+                <img src="logo.png" alt="Partner">
+            </a>
+            
+            <a href="https://www.onistore.biz.id/">
+                <img src="logo.png" alt="Partner">
+            </a>
+
+        </div>
+    </div>
+
+    <script>
+        const countdown = () => {
+            const eventDate = new Date("January 27, 2025 23:59:59").getTime();
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+
+            if (timeLeft < 0) {
+                clearInterval(timer);
+                document.querySelector(".countdown-container").innerHTML = "PROMO TELAH BERAKHIR!!";
+            }
+        };
+
+        const timer = setInterval(countdown, 1000);
+    </script>
+
+</body>
+</html>
